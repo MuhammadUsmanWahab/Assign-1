@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Google</title>
+</head>
+<style type="text/css">
+body {
+    background-color: gray;
+    
+    text-align: center;
+    
+}
+form
+{
+
+text-align: center;
+  width: 1200px;
+  color: #3E4A49;
+  background-color: #FEF7D6;
+  padding: 190px;
+
+  border: 10px solid #4899BE;
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-serif;
+  
+}
+h1 {color: blue;
+background-color:aqua;
+border-width:20px;
+border-color: gold;
+border-style: solid; 
+}
+</style>
+
+<body>
+<h1>calculator</h1>
+<form name="cal" >
+    <br/><br/>
+    <br/> 
+   <input type="text"  name="result" style="width :250px"/><br/><br/>
+    <input type="button"  name= "button9" value="9" style="width :70px" onClick="num9()" />
+    <input type="button"  name= "button8" value="8" onClick="num8()" style="width :70px"/>
+    <input type="button"name= "button7" value="7" onClick="num7()" style="width :70px"/>
+    <input type="button"  name= "buttonplus" value="+" onClick="numplus()" style="width :70px"/>
+    <br/>
+    <input type="button"  name= "button6" value="6" onClick="num6()"style="width :70px"/>
+    <input type="button" name= "button5" value="5" onClick="num5()"style="width :70px"/>
+    <input type="button"  name= "button4" value="4" onClick="num4()"style="width :70px"/>
+    <input type="button" name= "buttonminus" value="-" onClick="numminus()"style="width :70px"/>
+    <br/>
+    <input type="button"  name= "button3" value="3"onClick="num3()"style="width :70px"/>
+    <input type="button" name= "button2" value="2" onClick="num2()"style="width :70px"/>
+    <input type="button" name= "button1" value="1" onClick="num1()"style="width :70px"/>
+    <input type="button"  name= "buttonmul" value="*" onClick="nummul()"style="width :70px"/>
+    <br/>
+    <input type="button"  name= "button0" value="0" onClick="num0()"style="width :70px"/>
+    <input type="button"  name= "button." value="."onClick="dotmethod()"style="width :70px"/>
+    <input type="button"  name= "buttondiv" value="/" onClick="numdiv()"style="width :70px"/>
+    <input type="button"  name= "buttonevaluate" value="=" onClick="evalu()"style="width :70px"/> <br/>
+     <input type="button"  name= "buttonclear" value="Clear" onClick="runclear()"style="width :70px"/>
+     <input type="button"  name= "backspace" value="Backspace" onClick="runbackspace()"style="width :90px"/>
+       
+
+</form>
+
+<script>
+
+function num9()
+{
+    document.cal.result.value += "9";
+}
+function num8()
+{
+    document.cal.result.value += "8";
+}
+function num7()
+{
+    document.cal.result.value += "7";
+}
+function num6()
+{
+    document.cal.result.value += "6";
+}
+function num5()
+{
+    document.cal.result.value += "5";
+}
+function num4()
+{
+    document.cal.result.value += "4";
+}
+function num3()
+{
+    document.cal.result.value += "3";
+}
+function num2()
+{
+    document.cal.result.value += "2";
+}
+function num1()
+{
+    document.cal.result.value += "1";
+}
+function num0()
+{
+    document.cal.result.value += "0";
+}
+function numplus()
+{
+    document.cal.result.value += "+";
+}
+function numminus()
+{
+    document.cal.result.value += "-";
+}
+function nummul()
+{
+    document.cal.result.value += "*";
+}
+function numdiv()
+{
+    document.cal.result.value += "/";
+}
+
+function dotmethod()
+{
+    document.cal.result.value += ".";
+}
+function evalu()
+{
+    var res = eval(document.cal.result.value);
+    document.cal.result.value=res; 
+}
+
+function runclear()
+{
+    document.cal.result.value= "";
+
+}
+
+function runbackspace()
+{
+  document.cal.result.value=document.cal.result.value.slice(0,document.cal.result.value.length-1);
+}
+
+</script>
+
+
+</body>
+</html>
